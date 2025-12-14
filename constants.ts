@@ -7,6 +7,14 @@ export const EXPERT_NAME = "Dra. Bruna Monique";
 export const PROFESSION = "Clínica Geral, Botox e Facetas";
 export const LOCATION = "Guarulhos";
 
+export const ADDRESS_DETAILS = {
+  street: "Rua Joseph Zarzour, 93 - Sala 516",
+  district: "Vila Moreira",
+  city: "Guarulhos/SP",
+  building: "Edifício Clavi EccoTower",
+  landmark: "(Próximo ao Hotel Slaviero)"
+};
+
 export const IMAGES = {
   hero: "https://i.imgur.com/LLaneCs.png",
   about: "https://i.imgur.com/SmgrkHv.png",

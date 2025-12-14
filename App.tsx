@@ -3,7 +3,7 @@ import { MapPin, Instagram, CheckCircle2 } from 'lucide-react';
 import { Section } from './components/Section';
 import { Button } from './components/Button';
 import { Gallery } from './components/Gallery';
-import { IMAGES, EXPERT_NAME, PROFESSION, FEATURES, STEPS, INSTAGRAM_LINK, LOCATION } from './constants';
+import { IMAGES, EXPERT_NAME, PROFESSION, FEATURES, STEPS, INSTAGRAM_LINK, ADDRESS_DETAILS } from './constants';
 
 function App() {
   return (
@@ -20,7 +20,7 @@ function App() {
             {/* Text Content */}
             <div className="flex-1 text-center md:text-left order-2 md:order-1">
               <span className="inline-block px-4 py-1.5 mb-6 text-sm font-bold tracking-wider text-brand-800 uppercase bg-brand-100 rounded-full">
-                Vila Moreira • Guarulhos/SP
+                {ADDRESS_DETAILS.district} • {ADDRESS_DETAILS.city}
               </span>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-dark-900 leading-[1.1] mb-6">
                 Eu sou <span className="text-brand-700">{EXPERT_NAME}</span>, sua dentista de confiança.
@@ -99,7 +99,7 @@ function App() {
                   "Formada em Odontologia com foco em estética",
                   "Especialista em Harmonização Facial (Botox)",
                   "Atendimento lúdico e paciente para crianças",
-                  "Consultório no Edifício Clavi EccoTower, Guarulhos"
+                  `Consultório em ${ADDRESS_DETAILS.city}`
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-3">
                     <span className="mt-1 text-brand-600 bg-brand-50 p-0.5 rounded-full">
@@ -236,10 +236,10 @@ function App() {
             <div className="flex flex-col items-center gap-2 text-sm max-w-lg">
               <div className="flex items-center justify-center gap-2 text-brand-500">
                 <MapPin size={18} />
-                <span className="font-semibold text-stone-300">Rua Joseph Zarzour, 93 - Sala 516</span>
+                <span className="font-semibold text-stone-300">{ADDRESS_DETAILS.street}</span>
               </div>
-              <span className="block">Vila Moreira - Guarulhos/SP</span>
-              <span className="block text-stone-500">Edifício Clavi EccoTower (Próximo ao Hotel Slaviero)</span>
+              <span className="block">{ADDRESS_DETAILS.district} - {ADDRESS_DETAILS.city}</span>
+              <span className="block text-stone-500">{ADDRESS_DETAILS.building} {ADDRESS_DETAILS.landmark}</span>
             </div>
             
             <a 

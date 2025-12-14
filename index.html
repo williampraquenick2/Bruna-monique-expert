@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dra. Bruna Monique | Dentista em Campo Belo</title>
-    <meta name="description" content="Clínica Geral, Botox e Facetas em Resina. Agende sua primeira consulta gratuita com a Dra. Bruna Monique." />
+    <title>Dra. Bruna Monique | Dentista em Guarulhos</title>
+    <meta name="description" content="Clínica Geral, Botox e Facetas em Resina. Agende sua primeira consulta gratuita com a Dra. Bruna Monique em Guarulhos." />
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -16,7 +16,7 @@
                 100: '#dcfce7',
                 500: '#22c55e',
                 600: '#16a34a',
-                700: '#15803d', // Elegant Green
+                700: '#15803d',
                 800: '#166534',
                 900: '#14532d',
                 gold: '#c5a059',
@@ -38,15 +38,18 @@
   <script type="importmap">
 {
   "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2",
     "react/": "https://esm.sh/react@^19.2.3/",
     "react": "https://esm.sh/react@^19.2.3",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
-    "lucide-react": "https://esm.sh/lucide-react@^0.561.0"
+    "lucide-react": "https://esm.sh/lucide-react@^0.561.0",
+    "vite": "https://esm.sh/vite@^7.2.7"
   }
 }
 </script>
 </head>
   <body class="bg-stone-50 text-slate-800 antialiased selection:bg-brand-100 selection:text-brand-900">
     <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
   </body>
 </html>
